@@ -5,7 +5,7 @@
 
 # 总览
 </br>
-
+![github](https://raw.githubusercontent.com/hunimeizi/RecycleViewMultiType/master/app/src/main/res/mipmap-hdpi/zonglan_iamge.jpg"github")
 # MultiType基础用法
 </br>
 ### 引入</br>
