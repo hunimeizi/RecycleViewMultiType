@@ -5,11 +5,11 @@
 
 # 总览
 </br>
-![github](https://raw.githubusercontent.com/hunimeizi/RecycleViewMultiType/master/app/src/main/res/mipmap-hdpi/zonglan_iamge.jpg "github")
+![github](https://raw.githubusercontent.com/hunimeizi/RecycleViewMultiType/master/app/src/main/res/mipmap-hdpi/zonglan_iamge.jpg "github")</br>
 # MultiType基础用法
 </br>
 ### 引入</br>
-在你的 build.gradle:</br>
+在你的 build.gradle:</br></br>
 dependencies {
     compile 'me.drakeet.multitype:multitype:2.4.0'
 }</br>
