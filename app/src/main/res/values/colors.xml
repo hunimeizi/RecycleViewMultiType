@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="isw_load_more_view_footer_color">#b8b8b8</color>
+    <color name="isw_guess_list_line">#1A000000</color>
+    <color name="hwblue">#007DFF</color>
+    <color name="tab_bg_color_checked">#b99f69</color>
+    <color name="tab_text_color_unchecked">@color/tab_bg_color_checked</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="hwfivezeroblack">#80000000</color>
+    <color name="isw_black_percent75">#bf000000</color>
+    <color name="isw_line_color">#d3d3d3</color>
+    <color name="tab_text_color_checked">@color/white</color>
+    <color name="homepage_list_min_title_bg">#7f000000</color>
+
+</resources>

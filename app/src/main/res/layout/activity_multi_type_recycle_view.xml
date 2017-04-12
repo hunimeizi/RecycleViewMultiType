@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_multi_type_recycle_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.recycleview.multitype.loadmore.LoadMoreRecyclerView
+        android:id="@+id/loadMore_multiTypeRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:descendantFocusability="blocksDescendants"
+        app:loadMoreMode="click|scroll"
+        app:layoutManager="LinearLayoutManager"
+        app:loadMoreView="com.huawei.lifeservice.basefunction.ui.homepage.view.loadmore.DefaultLoadMoreView"
+        app:noLoadMoreHideView="false"/>
+</RelativeLayout>

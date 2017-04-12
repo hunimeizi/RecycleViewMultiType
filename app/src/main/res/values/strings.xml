@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MultiTypeRecycleView</string>
+    <string name="isw_checkmore_guesslist">查看更多</string>
+    <string name="isw_search_more_load">正在加载更多</string>
+    <string name="isw_loading_view_no_me">没有更多了</string>
+    <string name="isw_loading_view_loading">加载中…</string>
+    <string name="isw_loading_view_net_error">网络异常，点击重试</string>
+    <string name="isw_pro_more">更多</string>
+    <string name="isw_guess_title">猜你喜欢</string>
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/recy_guess_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_guess_module_item"
+            android:layout_width="179dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:background="@mipmap/ktv_ban"/>
+
+        <TextView
+            android:id="@+id/isw_guess_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/iv_guess_module_item"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:fontFamily="FZYOUH_508R--GB1-4"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="335m"
+            android:textColor="@color/homepage_list_min_title_bg"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_guess_module_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_guess_module_item"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/isw_guess_distance"
+            android:ellipsize="end"
+            android:fontFamily="FZYOUH_508R--GB1-4"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:text="丽都音乐会所ktv"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/isw_guess_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_guess_module_item_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/tv_guess_module_item_title"
+            android:ellipsize="end"
+            android:fontFamily="FZYOUH_508R--GB1-4"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="想唱就唱"
+            android:textColor="@color/homepage_list_min_title_bg"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_guess_module_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isw_guess_info"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="FZYOUH_508R--GB1-4"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="188￥"
+            android:textColor="#FA6522"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/isw_guess_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_guess_module_item_price"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/iv_guess_module_item"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:fontFamily="FZYOUH_508R--GB1-4"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="已售966"
+            android:textColor="@color/homepage_list_min_title_bg"
+            android:textSize="12sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/isw_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/imgs"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="1px"
+                android:scaleType="fitXY"
+                android:background="@mipmap/banner3"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/imgs">
+
+            <TextView
+                android:id="@+id/isw_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="FZYOUH_510M-GB1-4"
+                android:singleLine="true"
+                android:text="佳能 70D 单反相机"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/isw_group_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/isw_group_name"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/isw_group_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/isw_group_name"
+                    android:ellipsize="end"
+                    android:fontFamily="FZYOUH_508R-GB1-4"
+                    android:singleLine="true"
+                    android:text="高档型"
+                    android:textColor="@color/tab_bg_color_checked"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/isw_group_type"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/isw_group_sold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:fontFamily="FZYOUH_508R-GB1-4"
+                    android:singleLine="true"
+                    android:text="已售"
+                    android:textColor="@color/tab_bg_color_checked"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/isw_group_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="FZYOUH_508R-GB1-4"
+                        android:singleLine="true"
+                        android:text="东城区 "
+                        android:textColor="@color/tab_bg_color_checked"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/isw_group_market"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:fontFamily="FZYOUH_508R-GB1-4"
+                        android:singleLine="true"
+                        android:text="崇文门"
+                        android:textColor="@color/tab_bg_color_checked"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/isw_group_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/isw_line_color" />
+</LinearLayout>
