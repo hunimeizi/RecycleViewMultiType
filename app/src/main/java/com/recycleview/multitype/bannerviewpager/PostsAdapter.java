@@ -20,6 +20,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.recycleview.multitype.R;
@@ -50,6 +51,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.cover.setImageUrl(holder.itemView.getContext(),posts.get(position),holder.cover);
+        holder.title.setText("美眉 "+ position);
     }
 
 
@@ -61,9 +63,11 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         NetImageView cover;
+        TextView title;
         ViewHolder(View itemView) {
             super(itemView);
             cover = (NetImageView) itemView.findViewById(R.id.cover);
+            title = (TextView) itemView.findViewById(R.id.title);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
                     Toast.makeText(v.getContext(), String.valueOf(getAdapterPosition()),
