@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 import com.recycleview.multitype.R;
 import com.recycleview.multitype.adapter.Activity1_adapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import me.drakeet.multitype.ItemViewProvider;
 
 /**
@@ -31,16 +28,8 @@ public class Activity1Provider extends ItemViewProvider<Activity1, Activity1Prov
 
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull Activity1 activity1) {
-        List<String> list = new ArrayList<>();
-        list.add("充话费");
-        list.add("充流量");
-        list.add("团购");
-        list.add("打车");
-        list.add("酒店");
-        list.add("美食");
-        list.add("电影");
-        list.add("机票");
-        Activity1_adapter adapter = new Activity1_adapter(holder.itemView.getContext(), list);
+
+        Activity1_adapter adapter = new Activity1_adapter(holder.itemView.getContext(), activity1.getActivity_items());
         GridLayoutManager gridLayoutManager = new GridLayoutManager(holder.itemView.getContext(), 4);
         holder.recycle_activity1.setLayoutManager(gridLayoutManager);
         gridLayoutManager.setOrientation(OrientationHelper.VERTICAL);

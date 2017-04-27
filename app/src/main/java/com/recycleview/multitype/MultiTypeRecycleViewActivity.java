@@ -11,6 +11,7 @@ import com.recycleview.multitype.item.Activity2;
 import com.recycleview.multitype.item.Activity2Provider;
 import com.recycleview.multitype.item.Activity3;
 import com.recycleview.multitype.item.Activity3Provider;
+import com.recycleview.multitype.item.Activity_item;
 import com.recycleview.multitype.item.Banner;
 import com.recycleview.multitype.item.BannerProvider;
 import com.recycleview.multitype.item.GuessGrid;
@@ -63,23 +64,34 @@ public class MultiTypeRecycleViewActivity extends AppCompatActivity {
         registerProvider();
         items.add(new Banner());
         items.add(new Title("便捷生活"));
-        items.add(new Activity1());
+        List<String> list = new ArrayList<>();
+        list.add("充话费");
+        list.add("充流量");
+        list.add("团购");
+        list.add("打车");
+        list.add("酒店");
+        list.add("美食");
+        list.add("电影");
+        list.add("机票");
+        List<String> list_url = new ArrayList<>();
+        list_url.add("http://img4.imgtn.bdimg.com/it/u=3269960449,991534647&fm=23&gp=0.jpg");
+        list_url.add("http://img5.imgtn.bdimg.com/it/u=4155127908,3386565855&fm=23&gp=0.jpg");
+        list_url.add("http://img0.imgtn.bdimg.com/it/u=3192885799,3600275175&fm=23&gp=0.jpg");
+        list_url.add("http://img3.imgtn.bdimg.com/it/u=4131057487,2760357258&fm=23&gp=0.jpg");
+        list_url.add("http://img2.imgtn.bdimg.com/it/u=3177943619,3669422245&fm=23&gp=0.jpg");
+        list_url.add("http://img0.imgtn.bdimg.com/it/u=990986148,443719176&fm=23&gp=0.jpg");
+        list_url.add("http://img4.imgtn.bdimg.com/it/u=78088078,2856149958&fm=23&gp=0.jpg");
+        list_url.add("http://img5.imgtn.bdimg.com/it/u=1741358067,4251507804&fm=23&gp=0.jpg");
+        Activity_item activity_item = new Activity_item(list_url, list);
+        List<Activity_item> activity1List = new ArrayList<>();
+        activity1List.add(activity_item);
+        items.add(new Activity1(activity1List));
         items.add(new Title("产品推荐"));
         for (int i = 0; i < 5; i++) {
             items.add(new Activity2());
         }
         items.add(new Title("美人福利"));
-        List<String> list=new ArrayList<>();
-        list.add("http://img4.imgtn.bdimg.com/it/u=3269960449,991534647&fm=23&gp=0.jpg");
-        list.add("http://img5.imgtn.bdimg.com/it/u=4155127908,3386565855&fm=23&gp=0.jpg");
-        list.add("http://img0.imgtn.bdimg.com/it/u=3192885799,3600275175&fm=23&gp=0.jpg");
-        list.add("http://img3.imgtn.bdimg.com/it/u=4131057487,2760357258&fm=23&gp=0.jpg");
-        list.add("http://img2.imgtn.bdimg.com/it/u=3177943619,3669422245&fm=23&gp=0.jpg");
-        list.add("http://img0.imgtn.bdimg.com/it/u=990986148,443719176&fm=23&gp=0.jpg");
-        list.add("http://img4.imgtn.bdimg.com/it/u=78088078,2856149958&fm=23&gp=0.jpg");
-        list.add("http://img5.imgtn.bdimg.com/it/u=1741358067,4251507804&fm=23&gp=0.jpg");
-        list.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=703765976,3918410456&fm=11&gp=0.jpg");
-        items.add(new PostList(list));
+        items.add(new PostList(list_url));
         items.add(new Title("精彩推荐"));
         items.add(new Activity3());
         items.add(new Title("猜你喜欢"));
@@ -118,6 +130,7 @@ public class MultiTypeRecycleViewActivity extends AppCompatActivity {
 
     private int mTempGuessDataSize;
     private int mOldGuessDataSize;
+
     public void getGuessLonkeyData() {
         new Handler().postDelayed(new Runnable() {
             @Override
