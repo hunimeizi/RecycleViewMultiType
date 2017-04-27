@@ -15,6 +15,8 @@ import com.recycleview.multitype.item.Banner;
 import com.recycleview.multitype.item.BannerProvider;
 import com.recycleview.multitype.item.GuessGrid;
 import com.recycleview.multitype.item.GuessGridProvider;
+import com.recycleview.multitype.item.HorizontalPostsViewProvider;
+import com.recycleview.multitype.item.PostList;
 import com.recycleview.multitype.item.Title;
 import com.recycleview.multitype.item.TitleProvider;
 import com.recycleview.multitype.loadmore.LoadMoreRecyclerView;
@@ -66,6 +68,18 @@ public class MultiTypeRecycleViewActivity extends AppCompatActivity {
         for (int i = 0; i < 5; i++) {
             items.add(new Activity2());
         }
+        items.add(new Title("美人福利"));
+        List<String> list=new ArrayList<>();
+        list.add("http://img4.imgtn.bdimg.com/it/u=3269960449,991534647&fm=23&gp=0.jpg");
+        list.add("http://img5.imgtn.bdimg.com/it/u=4155127908,3386565855&fm=23&gp=0.jpg");
+        list.add("http://img0.imgtn.bdimg.com/it/u=3192885799,3600275175&fm=23&gp=0.jpg");
+        list.add("http://img3.imgtn.bdimg.com/it/u=4131057487,2760357258&fm=23&gp=0.jpg");
+        list.add("http://img2.imgtn.bdimg.com/it/u=3177943619,3669422245&fm=23&gp=0.jpg");
+        list.add("http://img0.imgtn.bdimg.com/it/u=990986148,443719176&fm=23&gp=0.jpg");
+        list.add("http://img4.imgtn.bdimg.com/it/u=78088078,2856149958&fm=23&gp=0.jpg");
+        list.add("http://img5.imgtn.bdimg.com/it/u=1741358067,4251507804&fm=23&gp=0.jpg");
+        list.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=703765976,3918410456&fm=11&gp=0.jpg");
+        items.add(new PostList(list));
         items.add(new Title("精彩推荐"));
         items.add(new Activity3());
         items.add(new Title("猜你喜欢"));
@@ -97,16 +111,22 @@ public class MultiTypeRecycleViewActivity extends AppCompatActivity {
         adapter.register(Title.class, new TitleProvider());
         adapter.register(Activity1.class, new Activity1Provider());
         adapter.register(Activity2.class, new Activity2Provider());
+        adapter.register(PostList.class, new HorizontalPostsViewProvider());
         adapter.register(Activity3.class, new Activity3Provider());
         adapter.register(GuessGrid.class, new GuessGridProvider());
     }
+
+    private int mTempGuessDataSize;
+    private int mOldGuessDataSize;
     public void getGuessLonkeyData() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 int oldSize = adapter.getItemCount();
+                mOldGuessDataSize = mTempGuessDataSize;
+                mTempGuessDataSize += 6;
                 for (int i = 0; i < 6; i++) {
-                    items.add(new GuessGrid());
+                    items.add(new GuessGrid(mOldGuessDataSize++));
                 }
                 adapter.notifyItemRangeInserted(oldSize, 6);
             }

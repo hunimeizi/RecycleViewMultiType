@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * Created by Duo Nuo on 2017/4/12.
@@ -20,8 +21,14 @@ public class GuessGridProvider extends me.drakeet.multitype.ItemViewProvider<Gue
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull GuessGrid guess) {
-
+    protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull final GuessGrid guess) {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), String.valueOf(guess.getPosition()),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

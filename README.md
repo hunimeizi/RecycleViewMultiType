@@ -4,7 +4,8 @@
 </br>
 
 # 总览</br>
-   ![github](https://raw.githubusercontent.com/hunimeizi/RecycleViewMultiType/master/app/src/main/res/mipmap-hdpi/zonglan_iamge.jpg "github")
+   <!-- ![github](https://raw.githubusercontent.com/hunimeizi/RecycleViewMultiType/master/app/src/main/res/mipmap-hdpi/zonglan_iamge.jpg "github") -->
+   (https://raw.githubusercontent.com/hunimeizi/RecycleViewMultiType/master/app/src/main/res/mipmap-hdpi/zonglan_iamge.jpg)
 
 # MultiType基础用法</br>
 
@@ -77,11 +78,53 @@
 </br>
 
 ##### 3.在 Activity 中加入 RecyclerView 和 List 并注册你的类型
-    adapter = new MultiTypeAdapter(items);
-     /* 注册类型和 View 的对应关系 */
-     adapter.register(Title.class, new TitleProvider());
-       items.add(new Title("便捷生活"));
-     loadMore_multiTypeRecycleView.setAdapter(adapter);
+        adapter = new MultiTypeAdapter(items);
+         /* 注册类型和 View 的对应关系 */
+        adapter.register(Title.class, new TitleProvider());
+        items.add(new Title("便捷生活"));
+        loadMore_multiTypeRecycleView.setAdapter(adapter);
 </br>
-这样就ok了
+
+##### 4.实现了RecycleView嵌套RecycleView横向滚动
+       recyclerView = (RecyclerView) itemView.findViewById(R.id.post_list);
+       LinearLayoutManager layoutManager = new LinearLayoutManager(itemView.getContext());
+       layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+       recyclerView.setLayoutManager(layoutManager);
+       adapter = new PostsAdapter();
+       recyclerView.setAdapter(adapter);
+  详细见 HorizontalPostsViewProvider类
+##### 5.实现RecycleView上拉加载更多操作并实现item点击postion问题
+         loadMore_multiTypeRecycleView.setOnLoadMoreListener(new OnLoadMoreListener() {
+                    @Override
+                    public void loadMore() {
+                        mPage++;
+                        if (mPage <= 5) {
+                            getGuessLonkeyData();
+                        } else {
+                            new Handler().post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    loadMore_multiTypeRecycleView.goneLoadingUI();
+                                    loadMore_multiTypeRecycleView.visibleMoreBtn();
+                                    loadMore_multiTypeRecycleView.onClickLoadMore();
+                                }
+                            });
+                        }
+                    }
+                });
+
+                public void getGuessLonkeyData() {
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                int oldSize = adapter.getItemCount();
+                                mOldGuessDataSize = mTempGuessDataSize;
+                                mTempGuessDataSize += 6;
+                                for (int i = 0; i < 6; i++) {
+                                    items.add(new GuessGrid(mOldGuessDataSize++));
+                                }
+                                adapter.notifyItemRangeInserted(oldSize, 6);
+                            }
+                        }, 1000);
+                    }
 
