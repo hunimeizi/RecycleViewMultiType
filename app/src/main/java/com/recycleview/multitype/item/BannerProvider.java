@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 
 import com.recycleview.multitype.R;
 import com.recycleview.multitype.bannerviewpager.SlideShowView;
+import com.recycleview.multitype.multitype.ItemViewProvider;
 import com.recycleview.multitype.utils.DisplayUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import me.drakeet.multitype.ItemViewProvider;
 
 /**
  * Created by Duo Nuo on 2017/4/12.

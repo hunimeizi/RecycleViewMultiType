@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.recycleview.multitype.R;
+import com.recycleview.multitype.multitype.ItemViewProvider;
 
-import me.drakeet.multitype.ItemViewProvider;
 
 /**
  * Created by Duo Nuo on 2017/4/12.

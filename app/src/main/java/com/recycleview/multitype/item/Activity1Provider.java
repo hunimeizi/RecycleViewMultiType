@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 
 import com.recycleview.multitype.R;
 import com.recycleview.multitype.adapter.Activity1_adapter;
+import com.recycleview.multitype.multitype.ItemViewProvider;
 
-import me.drakeet.multitype.ItemViewProvider;
 
 /**
  * Created by Duo Nuo on 2017/4/12.

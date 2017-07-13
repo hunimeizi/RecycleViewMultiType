@@ -31,7 +31,9 @@
     compile 'com.android.support:recyclerview-v7:你选择的版本'
     }
 
-
+### 不用以上“引入”模块，可添加该包以下工具类  
+        com.recycleview.multitype.multitype
+        
 ### 使用</br>
 ##### 1.创建一个 class，它将是你的数据类型或 Java bean/model. 对这个类的内容没有任何限制。示例如下：</br>
 

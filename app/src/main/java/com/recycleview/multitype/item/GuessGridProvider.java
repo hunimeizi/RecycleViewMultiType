@@ -7,10 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.recycleview.multitype.multitype.ItemViewProvider;
+
 /**
  * Created by Duo Nuo on 2017/4/12.
  */
-public class GuessGridProvider extends me.drakeet.multitype.ItemViewProvider<GuessGrid, GuessGridProvider.ViewHolder> {
+public class GuessGridProvider extends ItemViewProvider<GuessGrid, GuessGridProvider.ViewHolder> {
 
     @NonNull
     @Override

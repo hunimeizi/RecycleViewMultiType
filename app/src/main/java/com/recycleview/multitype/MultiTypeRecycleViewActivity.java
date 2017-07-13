@@ -22,11 +22,11 @@ import com.recycleview.multitype.item.Title;
 import com.recycleview.multitype.item.TitleProvider;
 import com.recycleview.multitype.loadmore.LoadMoreRecyclerView;
 import com.recycleview.multitype.loadmore.OnLoadMoreListener;
+import com.recycleview.multitype.multitype.MultiTypeAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import me.drakeet.multitype.MultiTypeAdapter;
 
 public class MultiTypeRecycleViewActivity extends AppCompatActivity {
 

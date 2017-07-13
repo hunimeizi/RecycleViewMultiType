@@ -25,10 +25,10 @@ import android.view.ViewGroup;
 
 import com.recycleview.multitype.R;
 import com.recycleview.multitype.bannerviewpager.PostsAdapter;
+import com.recycleview.multitype.multitype.ItemViewProvider;
 
 import java.util.List;
 
-import me.drakeet.multitype.ItemViewProvider;
 
 
 /**
