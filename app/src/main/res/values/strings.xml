@@ -7,4 +7,9 @@
     <string name="isw_loading_view_net_error">网络异常，点击重试</string>
     <string name="isw_pro_more">更多</string>
     <string name="isw_guess_title">猜你喜欢</string>
+    <string name="isw_permission_rationale_camera">需要开启摄像头权限，是否同意</string>
+    <string name="isw_permission_rationale_storage"> 需要读写SD卡，以便为您缓存图片以节省流量。</string>
+    <string name="isw_permission_location">需要获取设备的位置信息。</string>
+    <string name="isw_permission_rationale_contects">需要获取联系人权限。</string>
+    <string name="isw_permission_rationale_phonestate">“生活服务” 需要获取设备信息。</string>
 </resources>

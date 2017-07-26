@@ -23,6 +23,7 @@ import com.recycleview.multitype.item.TitleProvider;
 import com.recycleview.multitype.loadmore.LoadMoreRecyclerView;
 import com.recycleview.multitype.loadmore.OnLoadMoreListener;
 import com.recycleview.multitype.multitype.MultiTypeAdapter;
+import com.recycleview.multitype.utils.MPermissionsManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +40,12 @@ public class MultiTypeRecycleViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_type_recycle_view);
+        MPermissionsManager mPm = MPermissionsManager.getInstance();
+        if (!mPm.checkExternalWritePermission(this) || !mPm.checkExternalReadPermission(this))
+        {
+            mPm.requestExternalStoragePermission(this,
+                    MPermissionsManager.ACCESS_READWRITE_EXTERNAL_STORAGE_PERMISSIONS_REQUEST);
+        }
         final LoadMoreRecyclerView loadMore_multiTypeRecycleView = (LoadMoreRecyclerView) findViewById(R.id.loadMore_multiTypeRecycleView);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         //通过 setSpanSizeLookup 来告诉布局，item 占几个横向单位，如果横向有 2个单位，而你返回当前 item 占用 2个单位，
