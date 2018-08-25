@@ -1,7 +1,4 @@
 # MultiType
-</br>
-根据大神drakeet实现RecycleView的Item多类型demo进行改变，大神gitub地址为（https://github.com/drakeet/MultiType)
-</br>
 
 # 总览</br>
    <!-- ![github](https://raw.githubusercontent.com/hunimeizi/RecycleViewMultiType/master/app/src/main/res/mipmap-hdpi/zonglan_iamge.jpg "github") -->
